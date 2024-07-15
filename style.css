@@ -53,7 +53,7 @@ body {
 }
 
 .container {
-    width: 800px;
+    width: 960px;
     margin: auto;
     background-color: #fff;
 }
@@ -100,6 +100,10 @@ article .penulis {
     margin-top: 5px;
 }
 
+article .penulis a:hover {
+    text-decoration: none;
+}
+
 article .content {
     text-align: justify;
     margin-top: 14px;
@@ -107,9 +111,59 @@ article .content {
     line-height: 1.5;
 }
 
+.paragraf {
+    float: left;
+    width: 550px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    float: right;
+    width: 300px;
+}
+
+.sidebar h3 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar img {
+    width: 70px;
+    height: 70px;
+    margin-top: 5px;
+    float: left;
+    padding-right: 10px;
+}
+
+.sidebar p {
+    text-align: justify;
+    text-indent: 1px;
+    line-height: 1.2;
+}
+
 footer {
     background-color: black;
     color: white;
     padding: 10px;
     text-align: center;
+}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    zoom: 1;
 }
